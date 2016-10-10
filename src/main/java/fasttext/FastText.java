@@ -266,6 +266,12 @@ public class FastText {
 
 	public void train(String[] args_) throws IOException {
 		args.parseArgs(args_);
+		train(args);
+	}
+
+	public void train(Args args) throws IOException {
+		//args.parseArgs(args_);
+		this.args = args;
 		File file = new File(args.input);
 		if (!(file.exists() && file.isFile() && file.canRead())) {
 			throw new IOException("Input file cannot be opened! " + args.input);

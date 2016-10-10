@@ -225,8 +225,8 @@ public class Dictionary {
 				e.subwords = new Vector<Integer>();
 			}
 			// when it's classification the following init may be not used
-			//e.subwords.add(i);
-			//computeNgrams(word, e.subwords);
+			e.subwords.add(i);
+			computeNgrams(word, e.subwords);
 		}
 	}
 
